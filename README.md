@@ -20,7 +20,20 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+```ruby
+class AToBTransformer
+  include Samsa
+  
+  transforms do
+    map from: "foo", to: "nested.key"
+    map from: "bar", to: "baz", default: "quux"
+    set true, "added"
+  end
+end
+
+a = { foo: 1 }
+AToBTransformer.transform(a) # { nested: { key: 1 }, baz: "quux", added: true }
+```
 
 ## Development
 
