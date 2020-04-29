@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    samsa (0.1.0)
+    samsa (0.1.1)
       ramda-ruby (~> 0.16.0)
 
 GEM
